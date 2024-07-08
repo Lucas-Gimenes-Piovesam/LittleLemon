@@ -26,4 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurant/menu/', include('aa.urls')),
     path('restaurant/booking/', include(router.urls)),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
 ]
+#To login, visit the djoser generated URL http://127.0.0.1:8000/auth/token/login/. 
+#To Logout, enter the URL http://127.0.0.1:8000/auth/token/logout/  with a POST method to logout the user.
